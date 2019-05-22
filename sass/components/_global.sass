@@ -1,0 +1,29 @@
+body
+    margin: 0
+    min-width: 320px
+
+main 
+    position: relative
+    max-width: 1600px
+    margin: 0 auto
+
+.page
+    padding-top: 55px
+
+article, aside, footer, header, nav, main, section, summary, figure, figcaption 
+    display: block
+
+.keep
+    position: relative
+    height: 100vh
+
+*
+    &::selection
+        color: $root
+        background: darken($root, 5%)
+    
+img
+    max-width: 100%
+    height: auto
+
+
