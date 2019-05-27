@@ -197,5 +197,87 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
-// 5. ACF Page Options
+// 6. Shortcoder
 // ==========================================================================
+
+function trend_posts_shortcode_hero($atts, $content = NULL)
+{
+    $atts = shortcode_atts(
+        [
+            'orderby' => 'date',
+            'posts_per_page' => '3'
+        ], $atts, 'recent-posts' );
+     
+    $query = new WP_Query( $atts );
+ 
+    $output = '<ul class="coat">';
+ 
+    while($query->have_posts()) : $query->the_post();
+ 
+        $output .= '
+        <li class="block small-12 medium-4">
+                <div class="card">
+                    <div class="card-img">
+                    
+                    <a href="'. get_permalink() .'" ><img src="'. get_the_post_thumbnail_url( $id ).'" /></a>
+                    </div>
+                    <div class="card-content">
+                    <h4>
+                    <a href="'. get_permalink() .'" >' . get_the_title() . '</a>
+                    </h4>
+                    </div>
+                </div>
+            </li> ';
+ 
+    endwhile;
+ 
+    wp_reset_query();
+ 
+    return $output . '</ul>';
+}
+add_shortcode('herobanner', 'trend_posts_shortcode_hero');
+
+
+
+function trend_posts_shortcode_list($atts, $content = NULL)
+{
+    $atts = shortcode_atts(
+        [
+            'orderby' => 'date',
+            'posts_per_page' => '5'
+        ], $atts, 'recent-posts' );
+     
+    $query = new WP_Query( $atts );
+ 
+    $output = '<ul class="feed-list">';
+ 
+    while($query->have_posts()) : $query->the_post();
+ 
+        $output .= '
+        <li>
+                                    <div class="card coat">
+                                        <div class="card-img block small-4">
+                                        <a href="'. get_permalink() .'"> 
+                                            <img src="'. get_the_post_thumbnail_url( $id ).'">
+                                        </a>
+
+                                        </div>
+
+                                        <div class="card-content block small-7">
+                                            <div class="coat">
+                                                <h4 class="category-tag">'. get_the_category( $id, true ).'</h4>
+                                            </div>
+                                        <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
+                                        </div>
+
+                                    </div>
+                                </li>';
+ 
+    endwhile;
+ 
+    wp_reset_query();
+ 
+    return $output . '</ul>';
+}
+add_shortcode('postlist', 'trend_posts_shortcode_list');
+

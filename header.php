@@ -65,9 +65,9 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
                     <nav id="Top-bar" class="page-nav-container">
                         <div class="page-nav-content">
                             <ul id="nav-large" class="nav-list page-nav-menu-large">
-                                 <li class="item button-link menu-toggle-button">
+                                 <li class="item button-link menu-toggle-button" onclick="myFunction()" style="width: 70px; text-align: center">
                                     <div class="">
-                                         <div onclick="myFunction()" class="glyphsSprite hamburger"></div>
+                                         <div class="glyphsSprite hamburger"></div>
                                     </div>
                                 </li>
                                 <li class="logo item logo-container">

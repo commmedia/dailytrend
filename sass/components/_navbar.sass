@@ -28,10 +28,12 @@
     width: auto
     height: $header
     +flexbox
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
-    justify-content: space-between
     +user-select (none)
+    @media only screen and (max-width: $small-breakpoint)
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+    
 
     .item
         line-height: 2.7

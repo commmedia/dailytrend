@@ -38,7 +38,7 @@ ul, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 800;
 }
 
 h1 {
@@ -370,13 +370,17 @@ input.button {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media only screen and (max-width: 767px) {
+  .nav-list {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 }
 .nav-list .item {
   line-height: 2.7;
@@ -533,6 +537,9 @@ img {
   transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.2s ease-out;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+}
+.card h4 {
+  margin: 0;
 }
 .card .card-img {
   display: block;
