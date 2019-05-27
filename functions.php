@@ -219,7 +219,7 @@ function trend_posts_shortcode_hero($atts, $content = NULL)
                 <div class="card">
                     <div class="card-img">
                     
-                    <a href="'. get_permalink() .'" ><img src="'. get_the_post_thumbnail_url( $id ).'" /></a>
+                    <a href="'. get_permalink() .'" ><img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ) .'" /></a>
                     </div>
                     <div class="card-content">
                     <h4>
@@ -258,7 +258,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
                                     <div class="card coat">
                                         <div class="card-img block small-4">
                                         <a href="'. get_permalink() .'"> 
-                                            <img src="'. get_the_post_thumbnail_url( $id ).'">
+                                            <img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ).'">
                                         </a>
 
                                         </div>
