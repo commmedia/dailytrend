@@ -136,18 +136,13 @@ register_sidebar( array(
 
   }
 
-  
-
-
-
-
 // 3. Thumbnail sizes
 // ==========================================================================
 
-    add_filter('jpeg_quality', create_function('', 'return 70;'));
+    add_filter('jpeg_quality', create_function('', 'return 60;'));
 
-        add_image_size('garitmatic_default', 1140, 570, true);
-        add_image_size('garitmatic_square', 600, 580, true);
+        add_image_size('trend_default', 1140, 570, true);
+        add_image_size('trend_square', 600, 580, true);
 
 // 4. Enqueue scripts and styles
 // ==========================================================================
@@ -192,6 +187,15 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Social',
 		'menu_title'	=> 'Social',
 		'parent_slug'	=> 'theme-general-settings',
+  ));
+  
+  acf_add_options_sub_page(array(
+		'page_title' 	=> 'Ads',
+		'menu_title'	=> 'Ads',
+		'parent_slug'	=> 'theme-general-settings',
 	));
 	
 }
+
+// 5. ACF Page Options
+// ==========================================================================

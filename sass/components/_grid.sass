@@ -1,0 +1,27 @@
+.feed
+    li
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+        grid-auto-flow: row dense
+        grid-gap: 1.9vw
+        padding-bottom: 50px
+    
+.feed-list
+    li
+        padding-bottom: 20px
+        h1, h2, h3, h4
+            margin: 0
+        .category-tag
+            background: $root
+            color: $dark
+            padding: 2px 15px
+
+#sidebar
+    .follow-buttons
+        display: inline-block
+        padding-bottom: 20px
+    .button
+        margin-bottom: 10px
+        width: 100%
+        display: block
+        text-align: center

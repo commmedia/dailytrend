@@ -40,9 +40,26 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
 
     </head>
 
+    
+
     <!-- body -->
 
     <body <?php body_class(); ?>>
+
+     <!-- Theme options -->
+    <style>
+    .glyphsSprite {
+        background-image: url(<?php echo get_field('sprite_glyphs','options'); ?> );
+    } 
+    @media (max-width: 740px) {
+        .glyphsSprite {
+            background-image: url(<?php echo get_field('sprite_glyphs_retina','options'); ?>);
+        }
+    }
+    </style>
+
+    <!-- Ads -->
+    
 
     <header class="page-header">
                     <nav id="Top-bar" class="page-nav-container">
@@ -50,7 +67,7 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
                             <ul id="nav-large" class="nav-list page-nav-menu-large">
                                  <li class="item button-link menu-toggle-button">
                                     <div class="">
-                                         <div class="glyphsSprite menu"></div>
+                                         <div onclick="myFunction()" class="glyphsSprite hamburger"></div>
                                     </div>
                                 </li>
                                 <li class="logo item logo-container">
@@ -63,13 +80,10 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
                                 
                             </ul>
 
-                            <div>
-                                <div class="nav-container">
+                            <div id="menu-trigger">
 
-                                    <ul class="page-menu">
-                                 
-                                    </ul>
-                                </div>
+                                <?php wp_nav_menu(); ?>
+
                             </div>
                         </div>
                     </nav>
