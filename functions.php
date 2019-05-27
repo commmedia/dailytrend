@@ -142,7 +142,7 @@ register_sidebar( array(
     add_filter('jpeg_quality', create_function('', 'return 60;'));
 
         add_image_size('trend_default', 1140, 570, true);
-        add_image_size('trend_square', 600, 580, true);
+        add_image_size('trend_square', 400, 380, true);
 
 // 4. Enqueue scripts and styles
 // ==========================================================================
