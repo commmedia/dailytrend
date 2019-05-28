@@ -32,6 +32,14 @@ img
     margin: 0 auto
     .post-thumbnail
         text-align: center
-    .post-title, .post-content
+    .post-title, .post-content, .post-meta, .post-excerpt
         padding-left: 20px
         padding-right: 20px
+    .post-meta
+        li
+            &::after
+                content: "/"
+                margin: 0 11px
+                display: inline-block
+                color: #000
+                opacity: .15

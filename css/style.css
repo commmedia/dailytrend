@@ -499,9 +499,16 @@ img {
 .post-container .post-thumbnail {
   text-align: center;
 }
-.post-container .post-title, .post-container .post-content {
+.post-container .post-title, .post-container .post-content, .post-container .post-meta, .post-container .post-excerpt {
   padding-left: 20px;
   padding-right: 20px;
+}
+.post-container .post-meta li::after {
+  content: "/";
+  margin: 0 11px;
+  display: inline-block;
+  color: #000;
+  opacity: 0.15;
 }
 
 .copyright {

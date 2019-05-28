@@ -18,11 +18,25 @@ get_header(); ?>
             <div class="post-title">
                 <h1><?php the_title() ?></h1>
             </div>
-        </div>
+            <div class="post-meta">
+            <ul class="nav-list">
+                <li class="item"><?php the_time('M d, Y'); ?></li>
+                <li class="item"><?php the_category(); ?></li>
+                <li class="item">Por <?php the_author_posts_link(); ?></li>
+            </ul>
+            </div>
+
+            <div class="post-excerpt">
+                <?php the_excerpt(); ?>
+            </div>
 
         <div class="post-content">
              <?php the_content(); ?>
         </div>
+
+        </div>
+
+        
 
     </div>
 
