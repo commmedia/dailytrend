@@ -113,8 +113,8 @@ register_sidebar( array(
 
 
 register_sidebar( array(
-  'name' => __( 'Front 8', 'theme-slug' ),
-  'id' => 'front-8',
+  'name' => __( 'Sidebar 1', 'theme-slug' ),
+  'id' => 'sidebar-1',
   'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
   'before_widget' => '<li id="%1$s" class="widget %2$s">',
 'after_widget'  => '</li>',
@@ -143,6 +143,7 @@ register_sidebar( array(
 
         add_image_size('trend_default', 1140, 570, true);
         add_image_size('trend_square', 400, 380, true);
+        add_image_size('trend_hero', 400, 380, true);
 
 // 4. Enqueue scripts and styles
 // ==========================================================================

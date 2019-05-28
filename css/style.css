@@ -492,8 +492,21 @@ img {
   height: auto;
 }
 
+.post-container {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.post-container .post-thumbnail {
+  text-align: center;
+}
+.post-container .post-title, .post-container .post-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .copyright {
   text-align: center;
+  padding: 30px;
 }
 
 .glyphsSprite {
