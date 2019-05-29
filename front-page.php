@@ -44,7 +44,7 @@ get_header(); ?>
 
     </div>
 
-    <div class="coat">
+    <div class="block">
     
     <?php if (is_active_sidebar('front-3')) : ?>
                 <div id="primary-sidebar" >

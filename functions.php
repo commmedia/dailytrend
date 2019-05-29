@@ -248,3 +248,40 @@ function trend_posts_shortcode_list($atts, $content = NULL)
 }
 add_shortcode('postlist', 'trend_posts_shortcode_list');
 
+
+
+
+function trend_posts_banner_subhero($atts, $content = NULL)
+{   
+    $categories = get_the_category();
+    $category_id = $categories[0]->cat_ID;
+
+    $atts = shortcode_atts(
+        [
+            'orderby' => 'date',
+            'posts_per_page' => '1'
+        ], $atts, 'recent-posts' );
+     
+    $query = new WP_Query( $atts );
+    $categories = get_the_category();
+ 
+    $output = '<ul class="">';
+ 
+    while($query->have_posts()) : $query->the_post();
+ 
+        $output .= '
+        <li>
+                                    <div class="card">
+                                        <div class="card-subhero pad" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
+                                                <h3>' . get_the_title() . '</h3>
+                                                <p>'. get_the_author() .'</p>
+                                        </div>
+                                </li>';
+ 
+    endwhile;
+ 
+    wp_reset_query();
+ 
+    return $output . '</ul>';
+}
+add_shortcode('subhero', 'trend_posts_banner_subhero');
