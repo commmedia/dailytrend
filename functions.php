@@ -70,46 +70,7 @@
     'after_title'   => '</h2>',
     ));
     
-    register_sidebar( array(
-      'name' => __( 'Front 4', 'theme-slug' ),
-      'id' => 'front-4',
-      'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-      'before_widget' => '<li id="%1$s" class="widget %2$s">',
-  'after_widget'  => '</li>',
-  'before_title'  => '<h2 class="widgettitle">',
-  'after_title'   => '</h2>',
-  ));
 
-
-  register_sidebar( array(
-    'name' => __( 'Front 5', 'theme-slug' ),
-    'id' => 'front-5',
-    'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-'after_widget'  => '</li>',
-'before_title'  => '<h2 class="widgettitle">',
-'after_title'   => '</h2>',
-));
-
-register_sidebar( array(
-  'name' => __( 'Front 6', 'theme-slug' ),
-  'id' => 'front-6',
-  'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-  'before_widget' => '<li id="%1$s" class="widget %2$s">',
-'after_widget'  => '</li>',
-'before_title'  => '<h2 class="widgettitle">',
-'after_title'   => '</h2>',
-));
-
-register_sidebar( array(
-  'name' => __( 'Front 7', 'theme-slug' ),
-  'id' => 'front-7',
-  'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-  'before_widget' => '<li id="%1$s" class="widget %2$s">',
-'after_widget'  => '</li>',
-'before_title'  => '<h2 class="widgettitle">',
-'after_title'   => '</h2>',
-));
 
 
 register_sidebar( array(
@@ -124,8 +85,8 @@ register_sidebar( array(
 
 
 register_sidebar( array(
-  'name' => __( 'Front 9', 'theme-slug' ),
-  'id' => 'front-9',
+  'name' => __( 'After Entry', 'theme-slug' ),
+  'id' => 'after-entry',
   'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
   'before_widget' => '<li id="%1$s" class="widget %2$s">',
 'after_widget'  => '</li>',
@@ -143,8 +104,7 @@ register_sidebar( array(
 
         add_image_size('trend_default', 1140, 570, true);
         add_image_size('trend_square', 400, 380, true);
-        add_image_size('trend_hero', 400, 380, true);
-
+        
 // 4. Enqueue scripts and styles
 // ==========================================================================
 
@@ -241,7 +201,10 @@ add_shortcode('herobanner', 'trend_posts_shortcode_hero');
 
 
 function trend_posts_shortcode_list($atts, $content = NULL)
-{
+{   
+    $categories = get_the_category();
+    $category_id = $categories[0]->cat_ID;
+
     $atts = shortcode_atts(
         [
             'orderby' => 'date',
@@ -249,6 +212,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
+    $categories = get_the_category();
  
     $output = '<ul class="feed-list">';
  
@@ -266,7 +230,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
 
                                         <div class="card-content block small-7">
                                             <div class="coat">
-                                                <h4 class="category-tag">'. get_the_category( $id, true ).'</h4>
+                                            <h4 class="category-tag"> ' . get_cat_name( get_the_category($category_id) ) . '</h4>
                                             </div>
                                         <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
                                         </div>

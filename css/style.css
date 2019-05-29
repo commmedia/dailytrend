@@ -503,6 +503,14 @@ img {
   padding-left: 20px;
   padding-right: 20px;
 }
+.post-container .post-content {
+  padding-top: 30px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.post-container .post-content a {
+  box-shadow: inset 0 -3px 0 #408135;
+}
 .post-container .post-meta li::after {
   content: "/";
   margin: 0 11px;
