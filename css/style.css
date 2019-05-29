@@ -598,6 +598,9 @@ img {
   padding-bottom: 50px;
 }
 
+.feed-list {
+  padding: 50px 0;
+}
 .feed-list li {
   padding-bottom: 20px;
 }

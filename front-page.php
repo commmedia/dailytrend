@@ -16,23 +16,14 @@ get_header(); ?>
             <?php endif; ?>
 
 
-    <div class="coat pad">
-        <?php if (is_active_sidebar('front-2')) : ?>
-                <div id="primary-sidebar" >
-                    <?php dynamic_sidebar('front-2'); ?>
-                </div>
-            <?php endif; ?>
-         
-    </div>
-
     <div class="coat">
 
         <div class="block small-12 medium-8">
                 <div class="pad">
 
-                <?php if (is_active_sidebar('front-3')) : ?>
+                <?php if (is_active_sidebar('front-2')) : ?>
                 <div id="primary-sidebar" >
-                    <?php dynamic_sidebar('front-3'); ?>
+                    <?php dynamic_sidebar('front-2'); ?>
                 </div>
             <?php endif; ?>
 
@@ -51,6 +42,16 @@ get_header(); ?>
                 </div>
             <?php endif; ?>
 
+    </div>
+
+    <div class="coat">
+    
+    <?php if (is_active_sidebar('front-3')) : ?>
+                <div id="primary-sidebar" >
+                    <?php dynamic_sidebar('front-3'); ?>
+                </div>
+            <?php endif; ?>
+    
     </div>
 
 

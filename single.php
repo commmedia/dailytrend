@@ -32,7 +32,7 @@ get_header(); ?>
                 <ul class="nav-list">
                     <li class="item"><?php the_time('M d, Y'); ?></li>
                     <li class="item"><?php the_category('&bull;'); ?></li>
-                    <li class="item">Por </li>
+                    <li class="item">Por <?php the_author(); ?></li>
                 </ul>
             </div>
 

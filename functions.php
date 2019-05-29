@@ -186,6 +186,7 @@ function trend_posts_shortcode_hero($atts, $content = NULL)
                     <h4>
                     <a href="'. get_permalink() .'" >' . get_the_title() . '</a>
                     </h4>
+                    <p> Por '. get_the_author().' </p>
                     </div>
                 </div>
             </li> ';
@@ -233,6 +234,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
                                             <h4 class="category-tag"> ' . get_cat_name( get_the_category($category_id) ) . '</h4>
                                             </div>
                                         <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
+                                        
                                         </div>
 
                                     </div>
