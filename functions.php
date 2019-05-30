@@ -273,9 +273,11 @@ function trend_posts_banner_subhero($atts, $content = NULL)
         <li>
                                     <a href="'. get_permalink() .'">
                                     <div class="card">
-                                        <div class="card-subhero pad aire" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
+                                        <div class="card-subhero" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
+                                        <div class="content pad aire">
                                                 <h3 class="dark">' . get_the_title() . '</h3>
                                                 <p class="dark author-name">'. get_the_author() .'</p>
+                                                </div>
                                         </div></a>
                                 </li>';
  
