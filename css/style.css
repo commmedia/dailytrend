@@ -603,7 +603,7 @@ img {
   width: 100%;
   content: "";
 }
-.card .card-subhero:after .content {
+.card .card-subhero .content {
   z-index: 1;
   position: relative;
 }
