@@ -203,8 +203,6 @@ add_shortcode('herobanner', 'trend_posts_shortcode_hero');
 
 function trend_posts_shortcode_list($atts, $content = NULL)
 {   
-    $categories = get_the_category();
-    $category_id = $categories[0]->cat_ID;
 
     $atts = shortcode_atts(
         [
@@ -231,7 +229,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
 
                                         <div class="card-content block small-7">
                                             <div class="coat">
-                                            <h4 class="category-tag"> ' . get_cat_name( get_the_category($category_id) ) . '</h4>
+                                            <h4 class="category-tag"> ' .  get_cat_name(get_the_category()) . '</h4>
                                             </div>
                                         <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
                                         

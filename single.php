@@ -56,6 +56,7 @@ get_header(); ?>
 
     <div class="block">
         <div class="pad">
+        <h3>Más tendencias económicas</h3>
              <?php if (is_active_sidebar('after-entry')) : ?>
                 <div id="primary-sidebar" >
                     <?php dynamic_sidebar('after-entry'); ?>
