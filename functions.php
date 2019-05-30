@@ -222,21 +222,17 @@ function trend_posts_shortcode_list($atts, $content = NULL)
         <li>
                                     <div class="card coat">
                                         <div class="block small-4">
-                                        <div class="card-img">
-                                        <a href="'. get_permalink() .'"> 
-                                            <img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ).'">
-                                        </a>
-                                        </div>
+                                            <div class="card-img">
+                                                <a href="'. get_permalink() .'"> 
+                                                    <img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ).'">
+                                                </a>
+                                            </div>
                                         </div>
 
                                         <div class="block small-8">
                                             <div class="card-content">
-                                            
                                             <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
                                             </div>
-                                       
-                                        
-                                        </div>
                                         </div>
 
                                     </div>
