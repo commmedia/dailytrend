@@ -605,6 +605,12 @@ ul.feed {
 ul.feed li {
   box-sizing: border-box;
 }
+ul.hero {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+ul.hero .card {
+  min-height: 570px;
+}
 
 .feed-list {
   padding: 50px 0;

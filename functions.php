@@ -166,12 +166,12 @@ function trend_posts_shortcode_hero($atts, $content = NULL)
     $atts = shortcode_atts(
         [
             'orderby' => 'date',
-            'posts_per_page' => '3'
+            'posts_per_page' => '4'
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
  
-    $output = '<ul class="feed">';
+    $output = '<ul class="feed hero">';
  
     while($query->have_posts()) : $query->the_post();
  
