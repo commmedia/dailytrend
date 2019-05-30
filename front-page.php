@@ -18,7 +18,7 @@ get_header(); ?>
 
     <div class="coat">
 
-        <div class="block small-12 medium-8">
+        <div class="block small-12 large-8">
                 <div class="pad">
 
                 <?php if (is_active_sidebar('front-2')) : ?>
@@ -33,7 +33,7 @@ get_header(); ?>
 
 
 
-    <div class="block small-12 medium-4">
+    <div class="block small-12 large-4">
 
 
     <?php if (is_active_sidebar('sidebar-1')) : ?>

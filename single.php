@@ -16,11 +16,11 @@ get_header(); ?>
 
 <div class="coat">
 
-    <div class="block small-12 medium-8">
+    <div class="block small-12 large-8">
 
         <div class="post-container">
 
-            <div class="post-thumbnail">
+            <div class="post-thumbnail" style="padding-top: 50px;">
                 <img src="<?php the_post_thumbnail_url( 'trend_default' )?>" />
             </div>
 
@@ -36,8 +36,6 @@ get_header(); ?>
                 </ul>
             </div>
 
-           
-
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
@@ -46,7 +44,7 @@ get_header(); ?>
     </div>
 
 
-    <div class="block small-12 medium-4">
+    <div class="block small-12 large-4">
         <div class="pad">
              <?php if (is_active_sidebar('sidebar-1')) : ?>
                 <div id="primary-sidebar" >

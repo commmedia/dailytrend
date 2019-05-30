@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div class="coat">
 
-<div class="block small-12 medium-8">
+<div class="block small-12 large-8">
 <div class="pad">
 
 <h1><?php if (is_home() && get_option('page_for_posts')) echo get_the_title(get_option('page_for_posts')); ?>
@@ -36,7 +36,7 @@ get_header(); ?>
 </div>
 
 
-<div clas="block small-12 medium-4">
+<div clas="block small-12 large-4">
 <div class="pad">
 <?php if (is_active_sidebar('sidebar-1')) : ?>
                 <div id="primary-sidebar" >

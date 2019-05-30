@@ -171,12 +171,12 @@ function trend_posts_shortcode_hero($atts, $content = NULL)
      
     $query = new WP_Query( $atts );
  
-    $output = '<ul class="coat">';
+    $output = '<ul class="feed">';
  
     while($query->have_posts()) : $query->the_post();
  
         $output .= '
-        <li class="block small-12 medium-4">
+        <li>
                 <div class="card">
                     <div class="card-img">
                     
