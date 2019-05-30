@@ -20,7 +20,7 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
 
          <?php 
             $google_tag_manager = get_field('google_tag_manager','options');
-            if ($font) : ?>
+            if ($google_tag_manager) : ?>
             <?php echo $google_tag_manager ?>
             <?php endif;
             ?>
@@ -55,7 +55,7 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
 
     <?php 
             $google_tag_manager_noscript = get_field('google_tag_manager_noscript','options');
-            if ($font) : ?>
+            if ($google_tag_manager_noscript) : ?>
             <?php echo $google_tag_manager_noscript ?>
             <?php endif;
             ?>
