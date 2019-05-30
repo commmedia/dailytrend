@@ -230,7 +230,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
 
                                         <div class="card-content block small-7">
                                             <div class="coat">
-                                            <h4 class="category-tag"> ' .  get_cat_name(get_the_category()) . '</h4>
+                                            <h4 class="category-tag"> ' .  get_cat_name(get_the_category($id)) . '</h4>
                                             </div>
                                         <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
                                         
@@ -258,7 +258,8 @@ function trend_posts_banner_subhero($atts, $content = NULL)
     $atts = shortcode_atts(
         [
             'orderby' => 'date',
-            'posts_per_page' => '1'
+            'posts_per_page' => '1',
+            'offset' => '0',
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
@@ -270,11 +271,12 @@ function trend_posts_banner_subhero($atts, $content = NULL)
  
         $output .= '
         <li>
+                                    <a href="'. get_permalink() .'">
                                     <div class="card">
-                                        <div class="card-subhero pad" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
+                                        <div class="card-subhero pad aire" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
                                                 <h3 class="dark">' . get_the_title() . '</h3>
                                                 <p class="dark author-name">'. get_the_author() .'</p>
-                                        </div>
+                                        </div></a>
                                 </li>';
  
     endwhile;

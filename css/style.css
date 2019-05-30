@@ -641,6 +641,9 @@ ul.hero .card {
 .pad {
   padding: 50px;
 }
+.pad.aire {
+  padding: 100px 50px;
+}
 
 .player {
   position: absolute;
