@@ -597,10 +597,10 @@ img {
 }
 .card .card-subhero:after {
   display: block;
-  position: relative;
+  position: absolute;
   background-image: linear-gradient(to bottom, rgba(3, 25, 41, 0) 0, #1D1D1D 100%);
-  margin-top: -350px;
-  height: 350px;
+  top: 0;
+  bottom: 0;
   width: 100%;
   content: "";
 }
@@ -622,8 +622,10 @@ ul.feed li {
 ul.hero {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
-ul.hero .card {
-  min-height: 570px;
+@media only screen and (min-width: 767px) {
+  ul.hero .card {
+    min-height: 570px;
+  }
 }
 
 .feed-list {
@@ -640,6 +642,9 @@ ul.hero .card {
   color: #ffffff;
   padding: 2px 15px;
 }
+.feed-list li .card-content {
+  padding-top: 0;
+}
 
 #sidebar .follow-buttons {
   display: inline-block;
@@ -653,7 +658,7 @@ ul.hero .card {
 }
 
 .pad {
-  padding: 50px;
+  padding: 50px 10%;
 }
 .pad.aire {
   padding: 100px 10%;

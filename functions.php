@@ -221,19 +221,24 @@ function trend_posts_shortcode_list($atts, $content = NULL)
         $output .= '
         <li>
                                     <div class="card coat">
-                                        <div class="card-img block small-4">
+                                        <div class="block small-4">
+                                        <div class="card-img">
                                         <a href="'. get_permalink() .'"> 
                                             <img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ).'">
                                         </a>
-
+                                        </div>
                                         </div>
 
-                                        <div class="card-content block small-7">
+                                        <div class="block small-8">
+                                            <div class="card-content">
                                             <div class="coat">
                                             <h4 class="category-tag"> ' .  get_cat_name(get_the_category($id)) . '</h4>
                                             </div>
-                                        <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
+                                            <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
+                                            </div>
+                                       
                                         
+                                        </div>
                                         </div>
 
                                     </div>

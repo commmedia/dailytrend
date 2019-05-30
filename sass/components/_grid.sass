@@ -10,7 +10,9 @@ ul
     &.hero
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
         .card
-            min-height: 570px
+            @media only screen and (min-width: $small-breakpoint)
+                min-height: 570px
+            
         
 
     
@@ -24,6 +26,8 @@ ul
             background: $root
             color: $dark
             padding: 2px 15px
+        .card-content
+            padding-top: 0
 
 #sidebar
     .follow-buttons
