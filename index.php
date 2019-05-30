@@ -23,10 +23,22 @@ get_header(); ?>
 
 
 <li>
+
 <div class="card">
-<?php the_title(); ?>
-</div>
-<li>
+                    <div class="card-img">
+                    
+                    <a href="<?php  the_permalink() ?>" ><img src="<?php  the_post_thumbnail_url( 'trend_square' ) ?>" /></a>
+                    </div>
+                    <div class="card-content">
+                    <h4>
+                    <a href="<?php  the_permalink() ?>" ><?php the_title() ?></a>
+                    </h4>
+                    <p> Por <?php  the_author()?> </p>
+                    </div>
+                </div>
+
+
+
 
             <?php endwhile; ?>
         <?php endif; ?>
