@@ -207,7 +207,8 @@ function trend_posts_shortcode_list($atts, $content = NULL)
     $atts = shortcode_atts(
         [
             'orderby' => 'date',
-            'posts_per_page' => '5'
+            'posts_per_page' => '5',
+            'offset' => '0',
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
