@@ -18,6 +18,13 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
 
     <head>
 
+         <?php 
+            $google_tag_manager = get_field('google_tag_manager','options');
+            if ($font) : ?>
+            <?php echo $google_tag_manager ?>
+            <?php endif;
+            ?>
+
 
         <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
@@ -45,6 +52,13 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
     <!-- body -->
 
     <body <?php body_class(); ?>>
+
+    <?php 
+            $google_tag_manager_noscript = get_field('google_tag_manager_noscript','options');
+            if ($font) : ?>
+            <?php echo $google_tag_manager_noscript ?>
+            <?php endif;
+            ?>
 
      <!-- Theme options -->
     <style>
