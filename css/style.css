@@ -504,11 +504,11 @@ img {
 .post-container .post-title {
   margin-top: 30px;
 }
-.post-container .post-title, .post-container .post-content, .post-container .post-meta, .post-container .post-excerpt {
+.post-container .post-title, .post-container .post-content, .post-container .post-meta, .post-container .post-excerpt, .post-container .post-comments {
   padding-left: 20px;
   padding-right: 20px;
 }
-.post-container .post-title h1, .post-container .post-content h1, .post-container .post-meta h1, .post-container .post-excerpt h1 {
+.post-container .post-title h1, .post-container .post-content h1, .post-container .post-meta h1, .post-container .post-excerpt h1, .post-container .post-comments h1 {
   margin-top: 0;
 }
 .post-container .post-content {
