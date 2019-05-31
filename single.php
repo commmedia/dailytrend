@@ -23,16 +23,16 @@ get_header(); ?>
             <div class="post-thumbnail" style="padding-top: 50px;">
                 <img src="<?php the_post_thumbnail_url( 'trend_default' )?>" />
             </div>
-
+           
             <div class="post-title">
+                <div class="category-single-post"><?php the_category('&bull;'); ?></div>
                 <h1><?php the_title() ?></h1>
             </div>
 
             <div class="post-meta">
-                <ul class="nav-list">
+                <ul class="">
+                     <li class="item">Por <?php the_author(); ?></li>
                     <li class="item"><?php the_time('M d, Y'); ?></li>
-                    <li class="item"><?php the_category('&bull;'); ?></li>
-                    <li class="item">Por <?php the_author(); ?></li>
                 </ul>
             </div>
 
