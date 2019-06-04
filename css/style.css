@@ -432,8 +432,8 @@ input.button {
 .menu li {
   display: block;
   padding: 1em 0;
+  font-weight: bolder;
   font-size: 1em;
-  border-bottom: solid 1px #d6d6d6;
   text-decoration: none;
   transform: translateZ(0);
   transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
