@@ -675,10 +675,11 @@ ul.hero {
   padding: 100px 10%;
 }
 
-.pad-mobile {
-  padding: 0 10%;
+@media only screen and (max-width: 767px) {
+  .pad-mobile {
+    padding: 0 10%;
+  }
 }
-
 .player {
   position: absolute;
   top: 50%;
