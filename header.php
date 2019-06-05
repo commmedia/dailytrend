@@ -44,6 +44,15 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
         <!-- wp_head() -->
         <?php wp_head(); ?>
 
+        <!-- ads section -->
+
+        <?php 
+            $ad = get_field('ad','options');
+            if ($ad) : ?>
+            <?php echo $ad ?>
+            <?php endif;
+            ?>
+
 
     </head>
 
@@ -72,7 +81,6 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
     }
     </style>
 
-    <!-- Ads -->
     
 
     <header class="page-header">
