@@ -37,7 +37,7 @@ get_header(); ?>
 
 
     <?php if (is_active_sidebar('sidebar-1')) : ?>
-                <div id="primary-sidebar" >
+                <div id="primary-sidebar" class="pad">
                     <?php dynamic_sidebar('sidebar-1'); ?>
                 </div>
             <?php endif; ?>
