@@ -318,7 +318,7 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
     $query = new WP_Query( $atts );
  
     $output = '
-    <ul class="sidebar-feed-list pad">
+    <ul class="sidebar-feed-list">
     <h3 class="on">Lo último</h3>
     ';
  
