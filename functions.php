@@ -103,6 +103,7 @@ register_sidebar( array(
     add_filter('jpeg_quality', create_function('', 'return 60;'));
 
         add_image_size('trend_default', 1140, 570, true);
+        add_image_size('trend_horizontal', 570, 235, true);
         add_image_size('trend_square', 400, 380, true);
         
 // 4. Enqueue scripts and styles
@@ -161,6 +162,9 @@ if( function_exists('acf_add_options_page') ) {
 // 6. Shortcoder
 // ==========================================================================
 
+// 6.1 herobanner
+// =======================================================
+
 function trend_posts_shortcode_hero($atts, $content = NULL)
 {
     $atts = shortcode_atts(
@@ -180,7 +184,7 @@ function trend_posts_shortcode_hero($atts, $content = NULL)
                 <div class="card">
                     <div class="card-img">
                     
-                    <a href="'. get_permalink() .'" ><img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ) .'" /></a>
+                    <a href="'. get_permalink() .'" ><img src="'. get_the_post_thumbnail_url( $id, 'trend_horizontal' ) .'" /></a>
                     </div>
                     <div class="card-content">
                     <h4>
@@ -200,6 +204,9 @@ function trend_posts_shortcode_hero($atts, $content = NULL)
 add_shortcode('herobanner', 'trend_posts_shortcode_hero');
 
 
+// 6.2 postlist
+// =======================================================
+
 
 function trend_posts_shortcode_list($atts, $content = NULL)
 {   
@@ -212,8 +219,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
-    $categories = get_the_category();
- 
+    
     $output = '<ul class="feed-list">';
  
     while($query->have_posts()) : $query->the_post();
@@ -247,6 +253,9 @@ function trend_posts_shortcode_list($atts, $content = NULL)
 add_shortcode('postlist', 'trend_posts_shortcode_list');
 
 
+
+// 6.3 subhero
+// =======================================================
 
 
 function trend_posts_banner_subhero($atts, $content = NULL)
@@ -289,6 +298,48 @@ add_shortcode('subhero', 'trend_posts_banner_subhero');
 
 
 
+
+// 6.3 List Popular post
+// =======================================================
+
+
+function trend_posts_popular_sidebar($atts, $content = NULL)
+{   
+
+    $atts = shortcode_atts(
+        [
+            'orderby' => 'meta_value_num',
+            'posts_per_page' => '1',
+            'offset' => '0',
+            'meta_key' => 'my_post_viewed',
+            'order'=> 'DESC'
+        ], $atts, 'recent-posts' );
+     
+    $query = new WP_Query( $atts );
+ 
+    $output = '<ul class="sidebar-feed-list">';
+ 
+    while($query->have_posts()) : $query->the_post();
+ 
+        $output .= '
+        <li>
+                                    <a href="'. get_permalink() .'">
+                                    <div class="card">
+                                        <div class="card-subhero" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
+                                        <div class="content pad aire">
+                                                <h3 class="dark">' . get_the_title() . '</h3>
+                                                <p class="dark author-name">'. get_the_author() .'</p>
+                                                </div>
+                                        </div></a>
+                                </li>';
+ 
+    endwhile;
+ 
+    wp_reset_query();
+ 
+    return $output . '</ul>';
+}
+add_shortcode('splist', 'trend_posts_popular_sidebar');
 
 
 
