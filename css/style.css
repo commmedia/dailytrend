@@ -42,6 +42,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+.on {
+  line-height: 2.42em;
+  z-index: 2;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
 h1 {
   font-size: 2.289em;
 }
@@ -520,7 +528,7 @@ img {
   box-shadow: inset 0 -3px 0 #408135;
 }
 .post-container .post-meta li {
-  color: #a3a3a3;
+  color: #b8b8b8;
 }
 
 .author-name {
@@ -669,6 +677,18 @@ ul.hero {
   text-align: center;
 }
 
+.sidebar-feed-list li {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #EBEBEB;
+}
+
+.time {
+  color: #EBEBEB !important;
+  font-weight: 400 !important;
+  text-align: right !important;
+}
+
 .pad {
   padding: 50px 10%;
 }
@@ -696,7 +716,7 @@ ul.hero {
   position: relative;
 }
 .inputer label {
-  color: #969696;
+  color: #ababab;
   position: absolute;
   left: 0.7em;
   top: 1em;
@@ -706,8 +726,8 @@ ul.hero {
   width: 100%;
   border: 0;
   border-radius: 4px;
-  border: solid 1px #d1d1d1;
-  background-color: #d1d1d1;
+  border: solid 1px #e6e6e6;
+  background-color: #e6e6e6;
   box-sizing: border-box;
   box-shadow: none;
   color: #1D1D1D;
@@ -718,8 +738,8 @@ ul.hero {
   font-size: 1rem;
 }
 .inputer input:focus {
-  border-color: #d6d6d6;
-  background: #d6d6d6;
+  border-color: #EBEBEB;
+  background: #EBEBEB;
   outline: none;
 }
 .inputer input:focus ~ label {
@@ -743,7 +763,7 @@ ul.hero {
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
 }
 .inputer textarea:focus {
-  border-color: #d6d6d6;
+  border-color: #EBEBEB;
   background: #ffffff;
   box-shadow: rgba(45, 45, 45, 0.05) 0px 2px 2px, rgba(49, 49, 49, 0.05) 0px 4px 4px, rgba(42, 42, 42, 0.05) 0px 8px 8px, rgba(32, 32, 32, 0.05) 0px 16px 16px, rgba(49, 49, 49, 0.05) 0px 32px 32px, rgba(35, 35, 35, 0.05) 0px 64px 64px;
 }

@@ -219,7 +219,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
-    
+
     $output = '<ul class="feed-list">';
  
     while($query->have_posts()) : $query->the_post();
@@ -299,7 +299,7 @@ add_shortcode('subhero', 'trend_posts_banner_subhero');
 
 
 
-// 6.3 List Popular post
+// 6.4 List Popular post
 // =======================================================
 
 
@@ -309,7 +309,7 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
     $atts = shortcode_atts(
         [
             'orderby' => 'meta_value_num',
-            'posts_per_page' => '1',
+            'posts_per_page' => '5',
             'offset' => '0',
             'meta_key' => 'my_post_viewed',
             'order'=> 'DESC'
@@ -317,21 +317,20 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
      
     $query = new WP_Query( $atts );
  
-    $output = '<ul class="sidebar-feed-list">';
+    $output = '
+    <ul class="sidebar-feed-list pad">
+    <h3 class="on">Lo último</h3>
+    ';
  
     while($query->have_posts()) : $query->the_post();
  
         $output .= '
         <li>
-                                    <a href="'. get_permalink() .'">
-                                    <div class="card">
-                                        <div class="card-subhero" style="background:url('. get_the_post_thumbnail_url( $id, 'large' ) . ')">
-                                        <div class="content pad aire">
-                                                <h3 class="dark">' . get_the_title() . '</h3>
-                                                <p class="dark author-name">'. get_the_author() .'</p>
-                                                </div>
-                                        </div></a>
-                                </li>';
+            <a href="'. get_permalink() .'">                                 
+                ' . get_the_title() . '
+            </a><br/>
+            <span class="time"> '. human_time_diff( get_the_time('U'), current_time('timestamp') ) . '&nbsp;' .'  </span>
+        </li>';
  
     endwhile;
  
