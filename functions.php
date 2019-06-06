@@ -251,18 +251,17 @@ add_shortcode('postlist', 'trend_posts_shortcode_list');
 
 function trend_posts_banner_subhero($atts, $content = NULL)
 {   
-    $categories = get_the_category();
-    $category_id = $categories[0]->cat_ID;
 
     $atts = shortcode_atts(
         [
-            'orderby' => 'date',
+            'orderby' => 'meta_value_num',
             'posts_per_page' => '1',
             'offset' => '0',
+            'meta_key' => 'my_post_viewed',
+            'order'=> 'DESC'
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
-    $categories = get_the_category();
  
     $output = '<ul class="">';
  
@@ -287,6 +286,8 @@ function trend_posts_banner_subhero($atts, $content = NULL)
     return $output . '</ul>';
 }
 add_shortcode('subhero', 'trend_posts_banner_subhero');
+
+
 
 
 
