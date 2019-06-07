@@ -20,12 +20,12 @@ get_header(); ?>
 
         <div class="post-container">
 
-            <div class="post-thumbnail" style="padding-top: 50px;">
+            <div class="post-thumbnail">
                 <img src="<?php the_post_thumbnail_url( 'trend_default' )?>" />
             </div>
            
             <div class="post-title">
-                <div class="category-single-post"><?php the_category('&bull;'); ?></div>
+                <div class="category-single-post"><?php the_category('<span class="trend-point">&bull;</span>'); ?></div>
                 <h1><?php the_title() ?></h1>
             </div>
 

@@ -111,4 +111,4 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
                     </nav>
                 </header>
 
-        <main>
+        <main class="page">
