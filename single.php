@@ -14,7 +14,7 @@ get_header(); ?>
         ?>
 
 <div class="block">
-        <div class="pad">
+        <div>
              <?php if (is_active_sidebar('before-entry')) : ?>
                 <div id="primary-sidebar" >
                     <?php dynamic_sidebar('before-entry'); ?>
