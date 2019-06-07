@@ -85,6 +85,16 @@ register_sidebar( array(
 
 
 register_sidebar( array(
+    'name' => __( 'Before Enty', 'theme-slug' ),
+    'id' => 'before-entry',
+    'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</li>',
+  'before_title'  => '<h2 class="widgettitle">',
+  'after_title'   => '</h2>',
+  ));
+
+register_sidebar( array(
   'name' => __( 'After Entry', 'theme-slug' ),
   'id' => 'after-entry',
   'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),

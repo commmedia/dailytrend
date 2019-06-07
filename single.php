@@ -13,6 +13,15 @@ get_header(); ?>
         <?php while (have_posts()) : the_post();
         ?>
 
+<div class="block">
+        <div class="pad">
+             <?php if (is_active_sidebar('before-entry')) : ?>
+                <div id="primary-sidebar" >
+                    <?php dynamic_sidebar('before-entry'); ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
 
 <div class="coat">
 

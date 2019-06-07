@@ -8,6 +8,7 @@
  */
 get_header(); ?>
 
+
 <div>
                 <?php if (is_active_sidebar('front-1')) : ?>
                 <div id="primary-sidebar" >
@@ -53,6 +54,13 @@ get_header(); ?>
             <?php endif; ?>
     
     </div>
+
+
+
+
+
+
+
 
 
 
