@@ -63,7 +63,7 @@ get_header(); ?>
 
 
     <div class="block small-12 large-4">
-        <div class="pad">
+        <div class="mlr10">
              <?php if (is_active_sidebar('sidebar-1')) : ?>
                 <div id="primary-sidebar">
                     <?php dynamic_sidebar('sidebar-1'); ?>
@@ -73,7 +73,7 @@ get_header(); ?>
     </div>
 
     <div class="block">
-        <div class="mlr10">
+        <div class="pad">
              <?php if (is_active_sidebar('after-entry')) : ?>
                 <div id="primary-sidebar" >
                     <?php dynamic_sidebar('after-entry'); ?>
