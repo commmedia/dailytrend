@@ -19,7 +19,7 @@ get_header(); ?>
 
             <div class="coat">
                 <div class="block small-12 large-8">
-                    <div class="pad">
+                    <div class="mlr10">
                         <?php if (is_active_sidebar('front-2')) : ?>
                             <div>
                                 <?php dynamic_sidebar('front-2'); ?>
