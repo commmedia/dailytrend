@@ -497,12 +497,12 @@ article, aside, footer, header, nav, main, section, summary, figure, figcaption 
   background: #101010;
 }
 
-img {
+img, video {
   max-width: 100%;
   height: auto;
 }
 
-.wp-caption {
+.wp-caption, .wp-video {
   width: auto !important;
 }
 
