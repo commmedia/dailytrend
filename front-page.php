@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-<div class="page">
+<div>
                 <?php if (is_active_sidebar('front-1')) : ?>
                 <div id="primary-sidebar" >
                     <?php dynamic_sidebar('front-1'); ?>
