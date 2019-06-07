@@ -503,7 +503,7 @@ img {
 }
 
 .wp-caption {
-  width: auto;
+  width: auto !important;
 }
 
 .post-container {
