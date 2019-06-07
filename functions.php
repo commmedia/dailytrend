@@ -319,7 +319,6 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
  
     $output = '
     <ul class="sidebar-feed-list">
-    <h3 class="on">Lo último</h3>
     ';
  
     while($query->have_posts()) : $query->the_post();
