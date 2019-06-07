@@ -49,13 +49,11 @@ get_header(); ?>
 
 
 <div clas="block small-12 large-4">
-<div class="pad">
 <?php if (is_active_sidebar('sidebar-1')) : ?>
                 <div id="primary-sidebar" class="pad" >
                     <?php dynamic_sidebar('sidebar-1'); ?>
                 </div>
             <?php endif; ?>
-</div>
 </div>
 
 </div>
