@@ -370,8 +370,36 @@ function count_post_visits() {
 add_action( 'wp_head', 'count_post_visits' );
 
 
+// 8. Flexi videos
+// ==========================================================================
 
-// 8. Acf groups
+// Videos responsive autómaticos
+if(!function_exists('video_content_filter')) {
+    function video_content_filter($content) {
+    
+           // busca algún iFrame en la página
+    $pattern = '/<iframe.*?src=".*?(vimeo|youtu\.?be).*?".*?<\/iframe>/';
+    preg_match_all($pattern, $content, $matches);
+    
+    foreach ($matches[0] as $match) {
+    // iFrame encontrado, ahora lo envolvemos en un DIV ...
+    $wrappedframe = '<div class="video-container">' . $match . '</div>';
+    
+    // Intercambia el original con el video, ahora encerrado
+    $content = str_replace($match, $wrappedframe, $content);
+    }
+    return $content;
+    }
+    // Aplicar a areas de contenido de la página o entrada 
+    add_filter( 'the_content', 'video_content_filter' );
+    
+    // Aplicar a los widgets si se quiere
+    add_filter( 'widget_text', 'video_content_filter' );
+   }
+
+
+
+// 9. Acf groups
 // ==========================================================================
 
 

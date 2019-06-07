@@ -502,6 +502,10 @@ img {
   height: auto;
 }
 
+.wp-caption {
+  width: auto;
+}
+
 .post-container {
   max-width: 740px;
   margin: 0 auto;
@@ -710,6 +714,13 @@ ul.hero {
 
 .dark {
   color: #ffffff !important;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
 }
 
 .inputer {
