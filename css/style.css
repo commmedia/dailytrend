@@ -651,11 +651,6 @@ ul.hero {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 @media only screen and (min-width: 767px) {
-  ul.hero {
-    padding: 0 25px;
-  }
-}
-@media only screen and (min-width: 767px) {
   ul.hero .card {
     min-height: 374px;
   }
@@ -712,6 +707,10 @@ ul.hero {
 .smushi {
   width: 90%;
   margin: 0 auto;
+}
+
+.plr25 {
+  padding: 25px;
 }
 
 @media only screen and (max-width: 767px) {

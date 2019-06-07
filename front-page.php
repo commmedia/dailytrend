@@ -11,7 +11,7 @@ get_header(); ?>
 
             <div class="block">
                 <?php if (is_active_sidebar('front-1')) : ?>
-                    <div>
+                    <div class="plr25">
                         <?php dynamic_sidebar('front-1'); ?>
                     </div>
                 <?php endif; ?>
