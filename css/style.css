@@ -480,7 +480,7 @@ main {
 }
 
 .page {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 article, aside, footer, header, nav, main, section, summary, figure, figcaption {
@@ -598,6 +598,7 @@ img, video {
   transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.2s ease-out;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+  background: #fff;
 }
 .card h4 {
   margin: 0;
@@ -706,6 +707,11 @@ ul.hero {
 
 .mlr10 {
   padding: 0 10%;
+}
+
+.smushi {
+  width: 90%;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
