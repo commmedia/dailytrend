@@ -30,7 +30,7 @@ get_header(); ?>
 
             <div class="block small-12 large-4">
                 <?php if (is_active_sidebar('sidebar-1')) : ?>
-                    <div>
+                    <div class="smushi">
                         <?php dynamic_sidebar('sidebar-1'); ?>
                     </div>
                 <?php endif; ?>
@@ -38,7 +38,7 @@ get_header(); ?>
 
             <div class="block">
                 <?php if (is_active_sidebar('front-3')) : ?>
-                    <div id="primary-sidebar" class="smushi">
+                    <div>
                         <?php dynamic_sidebar('front-3'); ?>
                     </div>
                 <?php endif; ?>
