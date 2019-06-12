@@ -401,8 +401,6 @@ if(!function_exists('video_content_filter')) {
 
 // 9. Acf groups
 // ==========================================================================
-
-
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
@@ -645,6 +643,30 @@ if( function_exists('acf_add_local_field_group') ):
                 'mime_types' => '',
             ),
             array(
+                'key' => 'field_5d005d90cbed0',
+                'label' => 'Hero Cover',
+                'name' => 'hero_cover',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
                 'key' => 'field_5cef3f00dfd28',
                 'label' => 'Google Tag Manager',
                 'name' => 'google_tag_manager',
@@ -689,135 +711,6 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'theme-general-settings',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-    ));
-    
-    acf_add_local_field_group(array(
-        'key' => 'group_5cf7292f27bda',
-        'title' => 'Profile user',
-        'fields' => array(
-            array(
-                'key' => 'field_5cf729393c54f',
-                'label' => 'avatar',
-                'name' => 'tb_avatar',
-                'type' => 'image',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'return_format' => 'url',
-                'preview_size' => 'medium',
-                'library' => 'all',
-                'min_width' => '',
-                'min_height' => '',
-                'min_size' => '',
-                'max_width' => '',
-                'max_height' => '',
-                'max_size' => '',
-                'mime_types' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'user_form',
-                    'operator' => '==',
-                    'value' => 'all',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-    ));
-    
-    acf_add_local_field_group(array(
-        'key' => 'group_5cf864c333993',
-        'title' => 'social',
-        'fields' => array(
-            array(
-                'key' => 'field_5cf864c729475',
-                'label' => 'facebook',
-                'name' => 'facebook_social',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
-                'key' => 'field_5cf864dd29476',
-                'label' => 'Instagram',
-                'name' => 'instagram_social',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
-                'key' => 'field_5cf864e729477',
-                'label' => 'Twitter',
-                'name' => 'twitter_social',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'options_page',
-                    'operator' => '==',
-                    'value' => 'acf-options-social',
                 ),
             ),
         ),
