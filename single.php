@@ -78,7 +78,7 @@ get_header(); ?>
 
     <div class="block small-12 large-4">
              <?php if (is_active_sidebar('sidebar-1')) : ?>
-                <div id="primary-sidebar" class="smushi">
+                <div id="primary-sidebar" style="padding-top:30px" class="smushi">
                     <?php dynamic_sidebar('sidebar-1'); ?>
                 </div>
             <?php endif; ?>
