@@ -16,7 +16,7 @@ get_header(); ?>
                         if ($hero_cover) : ?>
                         <?php echo $hero_cover ?>
                         <?php endif;
-                        ?>); margin-bottom:65px; padding: 25px 25px 0 25px" 
+                        ?>); margin-bottom:65px; padding: 55px" 
                     >
                         <?php dynamic_sidebar('front-1'); ?>
                     </div>
