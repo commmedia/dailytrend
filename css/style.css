@@ -701,7 +701,7 @@ ul.hero {
   margin-bottom: 30px;
   margin: 10px;
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (max-width: 767px) {
   .responsive .card {
     min-height: 260px;
   }
