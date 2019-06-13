@@ -122,9 +122,15 @@ register_sidebar( array(
     add_action( 'wp_enqueue_scripts', 'altitude_enqueue_scripts_styles' );
     function altitude_enqueue_scripts_styles() {
 
+        wp_enqueue_script( 'trend-global', get_stylesheet_directory_uri() . '/libraries/slider/slick/slick.min.js', array( 'jquery' ), '1.0.0' );
+        wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/js/global.js', array( 'jquery' ), '1.0.0' );
+        wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-1.11.0.min.js', array( 'jquery' ), '1.0.0' );
+        wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-migrate-1.2.1.min.js', array( 'jquery' ), '1.0.0' );
         wp_enqueue_script( 'trend-global', get_stylesheet_directory_uri() . '/js/global.js', array( 'jquery' ), '1.0.0' );
         wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/style.css' );
         wp_enqueue_style( 'trend-library', get_stylesheet_directory_uri() . '/css/style.css' );
+        wp_enqueue_style( 'slick-style', get_stylesheet_directory_uri() . '/libraries/slider/slick/slick.css' );
+        wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri() . '/libraries/slider/slick/slick-theme.css' );
         wp_enqueue_style( 'tend-typekit-font', 'https://use.typekit.net/tgg0hmb.css' );
     
     }
@@ -348,6 +354,47 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
     return $output . '</ul>';
 }
 add_shortcode('splist', 'trend_posts_popular_sidebar');
+
+// 6.1 Carrousel
+// =======================================================
+
+function trend_posts_shortcode_carrousel($atts, $content = NULL)
+{
+    $atts = shortcode_atts(
+        [
+            'orderby' => 'date',
+            'posts_per_page' => '4'
+        ], $atts, 'recent-posts' );
+     
+    $query = new WP_Query( $atts );
+ 
+    $output = '<div class="responsive">';
+ 
+    while($query->have_posts()) : $query->the_post();
+ 
+        $output .= '
+        <div>
+                <div class="card">
+                    <div class="card-img">
+                    
+                    <a href="'. get_permalink() .'" ><img src="'. get_the_post_thumbnail_url( $id, 'trend_horizontal' ) .'" /></a>
+                    </div>
+                    <div class="card-content">
+                    <h4>
+                    <a href="'. get_permalink() .'" >' . get_the_title() . '</a>
+                    </h4>
+                    <p> Por '. get_the_author().' </p>
+                    </div>
+                </div>
+            </div> ';
+ 
+    endwhile;
+ 
+    wp_reset_query();
+ 
+    return $output . '</div>';
+}
+add_shortcode('carrousel', 'trend_posts_shortcode_carrousel');
 
 
 
