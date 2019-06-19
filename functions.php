@@ -506,6 +506,13 @@ if( function_exists('acf_add_local_field_group') ):
                     'value' => 'acf-options-ads',
                 ),
             ),
+            array(
+                array(
+                    'param' => 'current_user_role',
+                    'operator' => '==',
+                    'value' => 'administrator',
+                ),
+            ),
         ),
         'menu_order' => 0,
         'position' => 'normal',
@@ -607,6 +614,13 @@ if( function_exists('acf_add_local_field_group') ):
                     'value' => 'acf-options-font',
                 ),
             ),
+            array(
+                array(
+                    'param' => 'current_user_role',
+                    'operator' => '==',
+                    'value' => 'administrator',
+                ),
+            ),
         ),
         'menu_order' => 0,
         'position' => 'normal',
@@ -650,6 +664,13 @@ if( function_exists('acf_add_local_field_group') ):
                     'value' => 'acf-options-footer',
                 ),
             ),
+            array(
+                array(
+                    'param' => 'current_user_role',
+                    'operator' => '==',
+                    'value' => 'administrator',
+                ),
+            ),
         ),
         'menu_order' => 0,
         'position' => 'normal',
@@ -665,6 +686,21 @@ if( function_exists('acf_add_local_field_group') ):
         'key' => 'group_5cdb8ccb10dbe',
         'title' => 'Global settings',
         'fields' => array(
+            array(
+                'key' => 'field_5d0a4eb34e57f',
+                'label' => 'Theme Color',
+                'name' => 'theme_color',
+                'type' => 'color_picker',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+            ),
             array(
                 'key' => 'field_5cdb8cf1974d8',
                 'label' => 'Glyphs',
@@ -782,6 +818,13 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'theme-general-settings',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'current_user_role',
+                    'operator' => '==',
+                    'value' => 'administrator',
                 ),
             ),
         ),
