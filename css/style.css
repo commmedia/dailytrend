@@ -685,6 +685,11 @@ ul.hero {
   text-align: center;
 }
 
+.sidebar-feed-list {
+  border: calc(var(--body-border-width, 20px) * 1 / 1 + 0px) solid transparent;
+  padding: 30px;
+  border-color: #000;
+}
 .sidebar-feed-list li {
   padding-bottom: 20px;
   margin-bottom: 20px;

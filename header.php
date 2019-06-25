@@ -78,7 +78,13 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
             background-image: url(<?php echo get_field('sprite_glyphs_retina','options'); ?>);
         }
     }
+    .theme {
+        background-color: url(<?php echo get_field('theme-color','options'); ?>)
+        };
+    
     </style>
+
+         
 
     
 
