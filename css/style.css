@@ -686,7 +686,7 @@ ul.hero {
 }
 
 .sidebar-feed-list {
-  border: calc(var(--body-border-width, 20px) * 1 / 1 + 0px) solid transparent;
+  border: calc(var(--body-border-width, 1px) * 1 / 1 + 0px) solid #9B9B9B;
   padding: 30px;
 }
 .sidebar-feed-list li {
