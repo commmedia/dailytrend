@@ -345,6 +345,7 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
                 ' . get_the_title() . '
             </a><br/>
             <span class="time"> '. human_time_diff( get_the_time('U'), current_time('timestamp') ) . '&nbsp;' .'  </span>
+            <hr class="q-line" />
         </li>';
  
     endwhile;
