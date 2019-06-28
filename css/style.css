@@ -549,6 +549,11 @@ img, video {
   margin: 0 10px;
 }
 
+.wp-block-embed-instagram iframe {
+  max-width: 100%;
+  min-width: 100%;
+}
+
 .copyright {
   text-align: center;
   padding: 30px;
