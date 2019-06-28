@@ -335,7 +335,7 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
     $query = new WP_Query( $atts );
  
     $output = '
-    <ul class="sidebar-feed-list '. $shadow .'">
+    <ul class="sidebar-feed-list shadowblack">
     ';
  
     while($query->have_posts()) : $query->the_post();

@@ -774,6 +774,16 @@ ul.hero {
   top: 12px;
 }
 
+.shadowpurple {
+  margin: 30px;
+  box-shadow: -14px 15px 0px 0px #6F1FF4;
+}
+
+.shadowblack {
+  margin: 30px;
+  box-shadow: -14px 15px 0px 0px #000;
+}
+
 .inputer {
   position: relative;
 }
