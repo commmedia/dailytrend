@@ -328,13 +328,14 @@ function trend_posts_popular_sidebar($atts, $content = NULL)
             'posts_per_page' => '5',
             'offset' => '0',
             'meta_key' => 'my_post_viewed',
-            'order'=> 'DESC'
+            'order'=> 'DESC',
+            'shadow'=> ''
         ], $atts, 'recent-posts' );
      
     $query = new WP_Query( $atts );
  
     $output = '
-    <ul class="sidebar-feed-list">
+    <ul class="sidebar-feed-list '. $shadow .'">
     ';
  
     while($query->have_posts()) : $query->the_post();

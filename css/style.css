@@ -689,6 +689,10 @@ ul.hero {
   border: calc(var(--body-border-width, 1px) * 1 / 1 + 0px) solid #9B9B9B;
   padding: 30px;
 }
+.sidebar-feed-list .shadowpurple {
+  margin: 30px;
+  box-shadow: -14px 15px 0px 0px #6F1FF4;
+}
 .sidebar-feed-list li {
   padding-bottom: 20px;
   margin-bottom: 20px;
