@@ -474,6 +474,7 @@ add_action('login_enqueue_scripts', 'my_login_stylesheet');
 
 // 10. Acf groups
 // ==========================================================================
+
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
@@ -506,13 +507,6 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'acf-options-ads',
-                ),
-            ),
-            array(
-                array(
-                    'param' => 'current_user_role',
-                    'operator' => '==',
-                    'value' => 'administrator',
                 ),
             ),
         ),
@@ -616,13 +610,6 @@ if( function_exists('acf_add_local_field_group') ):
                     'value' => 'acf-options-font',
                 ),
             ),
-            array(
-                array(
-                    'param' => 'current_user_role',
-                    'operator' => '==',
-                    'value' => 'administrator',
-                ),
-            ),
         ),
         'menu_order' => 0,
         'position' => 'normal',
@@ -664,13 +651,6 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'acf-options-footer',
-                ),
-            ),
-            array(
-                array(
-                    'param' => 'current_user_role',
-                    'operator' => '==',
-                    'value' => 'administrator',
                 ),
             ),
         ),
@@ -820,13 +800,6 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'theme-general-settings',
-                ),
-            ),
-            array(
-                array(
-                    'param' => 'current_user_role',
-                    'operator' => '==',
-                    'value' => 'administrator',
                 ),
             ),
         ),
