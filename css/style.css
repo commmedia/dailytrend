@@ -507,7 +507,8 @@ img, video {
   display: inline-block;
 }
 .card-category-tag .post-categories ul li {
-  display: block;
+  display: inline-block;
+  font-weight: 900;
 }
 .card-category-tag .post-categories a {
   background: #1D1D1D;
