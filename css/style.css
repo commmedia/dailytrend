@@ -501,6 +501,13 @@ img, video {
 
 .card-category-tag {
   margin-bottom: 10px;
+  margin-top: 30px;
+}
+.card-category-tag .post-categories ul {
+  display: inline-block;
+}
+.card-category-tag .post-categories ul li {
+  display: block;
 }
 .card-category-tag .post-categories a {
   background: #1D1D1D;

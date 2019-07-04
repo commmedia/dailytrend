@@ -256,7 +256,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
                                         <div class="block small-8">
                                             <div class="card-content">
                                             <div class="coat">
-                                            <h5 class="card-category-tag" >'. get_the_category_list( '', '', $recent["ID"] ) .'</a></h5>
+                                            <div class="card-category-tag" >'. get_the_category_list( '', '', $recent["ID"] ) .'</a></div>
                                             </div>
                                             <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
                                             </div>
