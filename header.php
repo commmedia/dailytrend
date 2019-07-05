@@ -7,14 +7,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> 
-<?php 
-$font_name = get_field('font_name','options');
-if ($font_name) : ?>
-style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;"
-<?php endif;
-?>
->
+<html <?php language_attributes(); ?> >
 
     <head>
 
@@ -25,16 +18,15 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
             <?php endif;
             ?>
 
-
         <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
             <?php 
             $font = get_field('font','options');
             if ($font) : ?>
             <?php echo $font ?>
             <?php endif;
             ?>
-
 
         <title>
             <?php wp_title(''); ?>
@@ -51,15 +43,16 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
             <?php echo $ad ?>
             <?php endif;
             ?>
-
-
     </head>
-
     
 
     <!-- body -->
 
     <body <?php body_class(); ?>>
+    
+    <style>
+        <?php do_action('styling'); ?>
+    </style>
 
     <?php 
             $google_tag_manager_noscript = get_field('google_tag_manager_noscript','options');
@@ -69,20 +62,6 @@ style="font-family: '<?php echo $font_name ?>', 'Helvetica Neue', 'Helvetica', '
             ?>
 
      <!-- Theme options -->
-    <style>
-    .glyphsSprite {
-        background-image: url(<?php echo get_field('sprite_glyphs','options'); ?> );
-    } 
-    @media (max-width: 740px) {
-        .glyphsSprite {
-            background-image: url(<?php echo get_field('sprite_glyphs_retina','options'); ?>);
-        }
-    }
-    .theme {
-        background-color: url(<?php echo get_field('theme-color','options'); ?>)
-        };
-    
-    </style>
 
          
 

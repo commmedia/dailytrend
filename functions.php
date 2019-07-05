@@ -175,6 +175,16 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+// 6. Styling
+// ==========================================================================
+
+function styling()
+{
+    include get_parent_theme_file_path('/style.php');
+}
+add_action('styling', 'styling');
+
+
 // 6. Shortcoder
 // ==========================================================================
 
@@ -259,6 +269,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
                                             <div class="card-category-tag" >'. get_the_category_list( '', '', $recent["ID"] ) .'</a></div>
                                             </div>
                                             <h4><a href="'. get_permalink() .'">' . get_the_title() . '</a> </h4>
+                                            <p> Por '. get_the_author().' </p>
                                             </div>
                                         </div>
 
