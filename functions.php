@@ -175,7 +175,7 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
-// 6. Styling
+// 6. Actions
 // ==========================================================================
 
 function styling()
@@ -183,6 +183,19 @@ function styling()
     include get_parent_theme_file_path('/style.php');
 }
 add_action('styling', 'styling');
+
+
+function share()
+{
+    include get_parent_theme_file_path('/inc/share.php');
+}
+add_action('share', 'share');
+
+function comment()
+{
+    include get_parent_theme_file_path('/inc/comment.php');
+}
+add_action('comment', 'comment');
 
 
 // 6. Shortcoder

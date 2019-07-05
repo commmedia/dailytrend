@@ -45,7 +45,6 @@
             ?>
     </head>
     
-
     <!-- body -->
 
     <body <?php body_class(); ?>>
@@ -61,11 +60,7 @@
             <?php endif;
             ?>
 
-     <!-- Theme options -->
-
-         
-
-    
+     <!-- Theme options -->    
 
     <header class="page-header">
                     <nav id="Top-bar" class="page-nav-container">
@@ -82,17 +77,12 @@
                                     </a>
                                 </li>
                                 <li class="item">
-                                </li>
-                                
+                                </li>    
                             </ul>
-
                             <div id="menu-trigger">
-
                                 <?php wp_nav_menu(); ?>
-
                             </div>
                         </div>
                     </nav>
                 </header>
-
         <main class="page">

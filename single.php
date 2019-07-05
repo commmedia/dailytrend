@@ -24,9 +24,7 @@ get_header(); ?>
     </div>
 
 <div class="coat">
-
     <div class="block small-12 large-8">
-
         <div class="post-container">
 
             <div class="post-thumbnail">
@@ -46,34 +44,17 @@ get_header(); ?>
             </div>
 
             <div class="post-content">
-                <div class="share-buttons" style="margin-bottom: 30px;">
-                <div class="nav-list">
-                    <a class="button block item"  href="javascript:fbshareCurrentPage()" style="color:#000; text-align:center; margin: 0 5px">Facebook</a>
-                    <a class="button block item" href="javascript:twshareCurrentPage()" style="color:#000; text-align:center; margin: 0 5px">Twitter</a>
-                </div>
-                </div>
+                <!-- Before content -->
+                <?php do_action('share'); ?>
 
+                <!-- Content -->
                 <?php the_content(); ?>
-                
-                <div class="share-buttons" style="margin-bottom: 30px;">
-                <div class="nav-list">
-                    <a class="button block item"  href="javascript:fbshareCurrentPage()" style="color:#000; text-align:center; margin: 0 5px">Facebook</a>
-                    <a class="button block item" href="javascript:twshareCurrentPage()" style="color:#000; text-align:center; margin: 0 5px">Twitter</a>
-                </div>
-                </div>
+
+                <!-- After content -->                              
+                <?php do_action('share'); ?>
             </div>
-            <div class="post-comments">
-            <h5><div class="glyphsSprite twitter before"></div>Déjanos tu opinión en Twitter.</h5>
-                <form class="block" action="https://twitter.com/intent/tweet" name="ComnentBox" target="_blank">
-                    <div class="coat inputer">
-                        <textarea id="ComnentBoxText" name="text" placeholder="Mensaje..."></textarea>
-                        <input type="hidden" value="<?php the_permalink() ?>" name="url" />
-                        <input type="submit" class="button block small-12 medium-4" value="Twittear" />
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
+            <?php do_action('comment'); ?>
 
 
     <div class="block small-12 large-4">
@@ -94,16 +75,13 @@ get_header(); ?>
         </div>
     </div>
 
-
 </div>
 
 <?php endwhile; ?>
 
-        <?php else : ?>
+    <?php else : ?>
 
-
-
-        <?php endif; ?>
+<?php endif; ?>
 
 
 
