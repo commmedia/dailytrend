@@ -5,6 +5,17 @@
  */
 
 ?>
+
+
+::selection{
+    background: <?php echo get_field('theme_color','options'); ?>;
+    color: #fff
+}
+
+.shadowblack {
+    box-shadow: -14px 15px 0px 0px <?php echo get_field('theme_color','options'); ?>;
+}
+
 /**
  * Typography *****
  */
