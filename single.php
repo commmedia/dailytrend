@@ -66,7 +66,7 @@ get_header(); ?>
     </div>
 
     <div class="block">
-        <div class="pad">
+        <div class="pad" style="backgorund:#f5f5f5">
              <?php if (is_active_sidebar('after-entry')) : ?>
                 <div id="primary-sidebar" >
                     <?php dynamic_sidebar('after-entry'); ?>
