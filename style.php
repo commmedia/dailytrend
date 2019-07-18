@@ -23,6 +23,14 @@
     fill: <?php echo get_field('theme_color','options'); ?>;
 }
 
+.active {
+    background: <?php echo get_field('theme_color','options'); ?>;
+}
+
+.active a {
+    color: #fff!important
+}
+
 /**
  * Typography *****
  */

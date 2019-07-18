@@ -568,6 +568,31 @@ img, video {
   min-width: 100%;
 }
 
+.pagination li {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0;
+  z-index: 6;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 250ms;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 3px 6px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 38px;
+  border: 2px solid #d6d6d6;
+  line-height: 38px;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.pagination li a {
+  margin: 10px;
+}
+
 .copyright {
   text-align: center;
   padding: 30px;
