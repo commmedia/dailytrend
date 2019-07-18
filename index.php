@@ -45,6 +45,10 @@ get_header(); ?>
                 <?php endif; ?>
         </ul>
 
+        <div class="coat">
+            <?php trend_numeric_posts_nav(); ?>
+        </div>
+
     </div>
 </div>
 
