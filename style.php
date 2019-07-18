@@ -23,13 +23,14 @@
     fill: <?php echo get_field('theme_color','options'); ?>;
 }
 
-.active {
-    background: <?php echo get_field('theme_color','options'); ?>;
+.active, .card-category-tag .post-categories a {
+    background: <?php echo get_field('theme_color','options'); ?>!important;
 }
 
 .active a {
     color: #fff!important
 }
+
 
 /**
  * Typography *****
