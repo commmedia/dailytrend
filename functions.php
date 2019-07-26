@@ -557,7 +557,6 @@ function trend_numeric_posts_nav()
 
 // 10. Acf groups
 // ==========================================================================
-
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
@@ -883,6 +882,87 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'theme-general-settings',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+    
+    acf_add_local_field_group(array(
+        'key' => 'group_5d3b4dd636efd',
+        'title' => 'Social',
+        'fields' => array(
+            array(
+                'key' => 'field_5d3b4ddbb639e',
+                'label' => 'Facebook',
+                'name' => 'facebook',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5d3b4e1d0fa8f',
+                'label' => 'Twitter',
+                'name' => 'twitter',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5d3b4e2e0ee81',
+                'label' => 'Instagram',
+                'name' => 'instagram',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'acf-options-social',
                 ),
             ),
         ),

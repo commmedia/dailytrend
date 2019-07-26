@@ -603,6 +603,10 @@ img, video {
   padding: 0 10%;
 }
 
+.side-right {
+  margin-right: auto;
+}
+
 .copyright {
   text-align: center;
   padding: 30px;
@@ -645,6 +649,12 @@ img, video {
 }
 .glyphsSprite.twitter {
   background-position: 0 -24px;
+}
+.glyphsSprite.facebook {
+  background-position: -24px -24px;
+}
+.glyphsSprite.instagram {
+  background-position: -48px -24px;
 }
 
 .card {
@@ -833,6 +843,16 @@ ul.hero {
   box-shadow: -14px 15px 0px 0px #000;
 }
 
+@media only screen and (min-width: 1155px) {
+  .hide-large {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 1155px) {
+  .hide-small {
+    display: none !important;
+  }
+}
 .inputer {
   position: relative;
 }

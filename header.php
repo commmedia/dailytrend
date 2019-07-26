@@ -76,7 +76,31 @@
                                         <div class="glyphsSprite logo"></div>
                                     </a>
                                 </li>
-                                <li class="item">
+                                <li class="item side-right">
+                                <div class="hide-small">
+                                    <ul class="nav-list">
+                                    <?php 
+                                    $twitter = get_field('twitter','options');
+                                    if ($twitter) : ?>
+                                    <li class="item"><a href="https://twitter.com/<?php echo $twitter ?>"><div class="glyphsSprite twitter"></div></a></li>
+                                    <?php endif;
+                                    ?>
+
+                                    <?php 
+                                    $facebook = get_field('facebook','options');
+                                    if ($facebook) : ?>
+                                    <li class="item"><a href="https://facebook.com/<?php echo $facebook ?>"><div class="glyphsSprite facebook"></div></a></li>
+                                    <?php endif;
+                                    ?>
+
+                                    <?php 
+                                    $instagram = get_field('instagram','options');
+                                    if ($instagram) : ?>
+                                    <li class="item"><a href="https://facebook.com/<?php echo $instagram ?>"><div class="glyphsSprite instagram"></div></a></li>
+                                    <?php endif;
+                                    ?>
+                                    </ul>
+                                    </div>
                                 </li>    
                             </ul>
                             <div id="menu-trigger">
