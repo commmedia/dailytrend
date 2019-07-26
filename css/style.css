@@ -604,7 +604,8 @@ img, video {
 }
 
 .side-right {
-  margin-right: auto;
+  margin-left: auto;
+  margin-right: 30px;
 }
 
 .copyright {
