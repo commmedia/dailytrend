@@ -869,12 +869,12 @@ ul.hero {
   border: 0;
   border-radius: 4px;
   border: solid 1px #f2f2f2;
-  background-color: #f2f2f2;
+  background-color: #F7F7F7;
   box-sizing: border-box;
   box-shadow: none;
   color: #1D1D1D;
   font-family: inherit;
-  height: 56px;
+  height: 36px;
   padding: 8px 10px;
   padding: 0.5rem 0.625rem;
   font-size: 1rem;

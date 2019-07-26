@@ -79,6 +79,7 @@
                                 <li class="item side-right">
                                 <div class="hide-small">
                                     <ul class="nav-list">
+                                    <li class="item"><?php get_search_form(); ?></li>
                                     <?php 
                                     $twitter = get_field('twitter','options');
                                     if ($twitter) : ?>
