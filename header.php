@@ -83,7 +83,7 @@
                                     <?php 
                                     $twitter = get_field('twitter','options');
                                     if ($twitter) : ?>
-                                    <li class="item"><a href="https://twitter.com/<?php echo $twitter ?>"><div class="glyphsSprite twitter"></div></a></li>
+                                    <li class="item"><a href="https://twitter.com/<?php echo $twitter ?>" target="_blank"><div class="glyphsSprite twitter"></div></a></li>
                                     <?php endif;
                                     ?>
 
