@@ -12,7 +12,7 @@
                     </div>
 </div>
 
-                <div class="block small-12 large-5">
+                <div class="block small-12 large-5" style="margin-top: 30px">
                 
 
                     <div class="mlr10">
@@ -25,7 +25,7 @@
                     </div>
                     </div>
 
-                    <div class="block small-12 large-2">
+                    <div class="block small-12 large-2" style="margin-top: 30px">
                     <div class="mlr10">
                     <ul>
                                     <?php 
@@ -55,14 +55,14 @@
                     </div>
 
                     <div class="block small-12 large-2">
-                    <div class="mlr10">
+                    <div class="mlr10" style="margin-top: 30px">
                     <?php wp_nav_menu(array(
                         'menu_class'      => '',
                     )); ?>
                     </div>
                     </div>
 
-                    <div class="block small-12 large-3">
+                    <div class="block small-12 large-3" style="margin-top: 30px">
                     <div class="mlr10" style="text-align: center">
 
                     <img width="180" src="<?php echo get_template_directory_uri(); ?>/static/media/comm.png" />
