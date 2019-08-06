@@ -104,6 +104,25 @@ register_sidebar( array(
 'after_title'   => '</h2>',
 ));
 
+register_sidebar( array(
+    'name' => __( 'Footer 1', 'theme-slug' ),
+    'id' => 'footer-1',
+    'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</li>',
+  'before_title'  => '<h2 class="widgettitle">',
+  'after_title'   => '</h2>',
+  ));
+
+  register_sidebar( array(
+    'name' => __( 'Footer 2', 'theme-slug' ),
+    'id' => 'footer-2',
+    'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</li>',
+  'before_title'  => '<h2 class="widgettitle">',
+  'after_title'   => '</h2>',
+  ));
 
   }
 
