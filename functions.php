@@ -576,6 +576,51 @@ function trend_numeric_posts_nav()
 
 // 10. Acf groups
 // ==========================================================================
+
+/* vichaunter desktop postbox */ function vichaunter_postbox_content() 
+{ echo '
+
+    <p>Capacitación orienteda al mejoramiento continuo de la calidad de nuestro producto</p>
+
+    <h2>SEO</h2>
+    <br>
+    <div>
+    <h3><b>Introducción</b></h3>
+    <p>En este video me presento, presento qué es lo que estaremos viendo en esta serie de videos y el por qué es importante</p>
+    <a href="https://www.loom.com/share/d32447e4ba774c59b337c9d5ab0254bf" target="_blank">Ver video <span aria-hidden="true" class="dashicons dashicons-external"></span></a>
+    </div>
+    <hr>
+
+    <div>
+    <h3><b>¿Qué es SEO?</b></h3>
+    <p>Hablaremos de las definiciones básicas y los objetivos</p>
+    <a href="https://www.loom.com/share/b5bd34fa96e0437a9791c3dabd0d31a8">Ver video <span aria-hidden="true" class="dashicons dashicons-external"></span></a>
+    </div>
+    <hr>
+
+    <div>
+    <h3><b>Primer parrafo</b></h3>
+    <p>La importancia del primer párrafo en el SEO y cómo lo implementamos</p>
+    <a href="https://www.loom.com/share/9640ceba406043429a690a1de3a9b6cf">Ver video <span aria-hidden="true" class="dashicons dashicons-external"></span></a>
+    </div>
+    <hr>
+
+
+    <div>
+    <h3><b>Primer parrafo</b></h3>
+    <p>Cómo verificamos la velocidad de carga de nuestras publicaciones</p>
+    <p>Haremos la implementación SEO a las imágenes y las buenas prácticas a la hora de subirlas</p>
+    <a href="https://www.loom.com/share/f4c51632e1d14673b73d7c84f9c0c5b7">Ver video <span aria-hidden="true" class="dashicons dashicons-external"></span></a>
+    </div>
+    <hr>
+    
+   
+    
+    '; } function vichaunter_postbox_content_setup() 
+{ $id = 'vichaunter_postbox_desktop'; $title = __( 'Academia' ); wp_add_dashboard_widget( $id, $title, 'vichaunter_postbox_content' ); } add_action('wp_dashboard_setup', 'vichaunter_postbox_content_setup');
+
+// 10. Acf groups
+// ==========================================================================
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
