@@ -607,7 +607,7 @@ function trend_numeric_posts_nav()
 
 
     <div>
-    <h3><b>Primer parrafo</b></h3>
+    <h3><b>Velocidad de carga en nuestras publicaciones y Cómo optimizar nuestras imágenes</b></h3>
     <p>Cómo verificamos la velocidad de carga de nuestras publicaciones</p>
     <p>Haremos la implementación SEO a las imágenes y las buenas prácticas a la hora de subirlas</p>
     <a href="https://www.loom.com/share/f4c51632e1d14673b73d7c84f9c0c5b7">Ver video <span aria-hidden="true" class="dashicons dashicons-external"></span></a>
