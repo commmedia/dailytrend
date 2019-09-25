@@ -287,7 +287,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
         $output .= '
         <li>
                                     <div class="card coat">
-                                        <div class="block small-4">
+                                        <div class="block small-12 large-4">
                                             <div class="card-img">
                                                 <a href="'. get_permalink() .'"> 
                                                     <img src="'. get_the_post_thumbnail_url( $id, 'trend_square' ).'">
@@ -295,7 +295,7 @@ function trend_posts_shortcode_list($atts, $content = NULL)
                                             </div>
                                         </div>
 
-                                        <div class="block small-8">
+                                        <div class="block small-12 large-8">
                                             <div class="card-content">
                                             <div class="coat">
                                             <div class="card-category-tag" >'. get_the_category_list( '', '', $recent["ID"] ) .'</a></div>
