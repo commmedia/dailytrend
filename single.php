@@ -17,5 +17,7 @@
       endwhile;
     endif;
     ?>
+
+    <hr style="opacity:0; height:200px">
  
 <?php get_footer(); ?>
