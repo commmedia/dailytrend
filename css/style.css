@@ -617,6 +617,15 @@ img, video {
   margin-right: 30px;
 }
 
+.single-post footer {
+  display: none;
+}
+
+@media only screen and (max-width: 1155px) {
+  #primary-sidebar {
+    display: none !important;
+  }
+}
 .copyright {
   text-align: center;
   padding: 30px;

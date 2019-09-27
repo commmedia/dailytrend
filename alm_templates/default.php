@@ -51,14 +51,4 @@
             <?php endif; ?>
     </div>
 
-    <div class="block">
-        <div class="related-post">
-             <?php if (is_active_sidebar('after-entry')) : ?>
-                <div id="primary-sidebar" >
-                    <?php dynamic_sidebar('after-entry'); ?>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-
 </div>
