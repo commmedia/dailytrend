@@ -80,5 +80,6 @@ if ($copyright) : ?>
 ?>
 </div>
 
+<?php wp_footer(); ?>
 
 </footer>
