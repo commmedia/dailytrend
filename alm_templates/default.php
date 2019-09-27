@@ -39,8 +39,9 @@
                 <!-- After content -->                              
                 <?php do_action('share'); ?>
             </div>
-
-            <?php do_action('comment'); ?>
+            <div style="margin-bottom:20px">
+                <?php do_action('comment'); ?>
+            </div>
 
 
     <div class="block small-12 large-4">
