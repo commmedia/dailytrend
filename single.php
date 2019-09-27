@@ -17,7 +17,9 @@
       endwhile;
     endif;
     ?>
-
-    <hr style="opacity:0; height:200px">
+  <div style="text-align: center">
+    <h2>Sigue Bajando</h2>
+    <p>Para encontrar más contenido</p>
+  </div>
  
 <?php get_footer(); ?>
